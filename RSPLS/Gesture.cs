@@ -41,17 +41,20 @@ namespace RSPLS
 			gestureStrings.Add(batman);
 			gestureStrings.Add(wizard);
 			gestureStrings.Add(glock);
-			PrintList(gestureStrings);
 		}
 
 		// Member Methods
-		// Print Lists
-		public void PrintList(List<string> checkoutList)
+		// Print Gesture List
+		public void PrintGestureList()
 		{
-			foreach (var i in checkoutList)
+			foreach (var i in gestureStrings)
 			Console.WriteLine(i);
 		}
+		// Print Attack List
+		public void PrintAttackList()
+		{
 
+		}
 
 	}
 }

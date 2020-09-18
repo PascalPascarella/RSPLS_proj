@@ -9,17 +9,22 @@ namespace RSPLS
 		// Member Variables
 		public Gesture gestures;
 
+
 		// Constructor
 		public Game()
 		{
+
 			gestures = new Gesture();
+
 		}
 
 		// Member Methods
 		// Main
 		public void GameRun()
 		{
+			// Player Greeting and Rules
 			PlayerGreeting();
+			gestures.PrintGestureList();
 		}
 
 		// Greeting
