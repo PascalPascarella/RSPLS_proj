@@ -7,12 +7,12 @@ namespace RSPLS
 	class Game
 	{
 		// Member Variables
-
+		public Gesture gestures;
 
 		// Constructor
 		public Game()
 		{
-
+			gestures = new Gesture();
 		}
 
 		// Member Methods
@@ -25,7 +25,8 @@ namespace RSPLS
 		// Greeting
 		public void PlayerGreeting()
 		{
-			Console.WriteLine("Welcome to Rock-Scissors-Paper-Lizard-Spock!");
+			Console.WriteLine("Welcome to...");
+			Console.WriteLine();
 		}
 	}
 }
