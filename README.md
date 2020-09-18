@@ -1,3 +1,4 @@
+## *Welcome to...*
 # ROCK-SCISSORS-PAPER-LIZARD-SPOCK
-# RSPLS
-
+---
+#### by Pascal Pascarella
