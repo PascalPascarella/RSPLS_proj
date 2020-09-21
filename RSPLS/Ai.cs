@@ -4,19 +4,22 @@ using System.Text;
 
 namespace RSPLS
 {
-	class Human_Player:Player
+	class Ai : Player
 	{
 		// Member Variables
 
 
 		// Constructor
-		public Human_Player()
+		public Ai()
 		{
 
 		}
 
 		// Member Methods
+		public override void GestureSelection()
+		{
 
+		}
 
 	}
 }

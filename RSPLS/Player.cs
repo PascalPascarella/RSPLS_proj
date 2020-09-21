@@ -7,6 +7,8 @@ namespace RSPLS
 	abstract class Player
 	{
 		// Member Variables
+		public ValueTuple gestureValuePair;
+		public int score;
 
 
 		// Constructor
@@ -16,6 +18,7 @@ namespace RSPLS
 		}
 
 		// Member Methods
+		public abstract void GestureSelection();
 
 
 	}
