@@ -9,6 +9,8 @@ namespace RSPLS
 	class Game
 	{
 		// Member Variables
+		public Player player1;
+		public Player player2;
 		public Ai aiPlayer;
 		public Human humanPlayer;
 		public Gesture gestures;
@@ -23,7 +25,7 @@ namespace RSPLS
 		{
 
 			aiPlayer = new Ai();
-			humanPlayer = new Human();
+			player1 = new Human();
 			gestures = new Gesture();
 			winningScore = 3;
 
@@ -38,9 +40,9 @@ namespace RSPLS
 			gestures.PrintGestureList();
 			Console.WriteLine("\n");
 			ViewRules();
-
 			// User Selects How Many Players and Type
 			// Game Start
+
 			// Declare Victor
 			// Play Again?
 			// Add Custom Gestures?
@@ -76,19 +78,14 @@ namespace RSPLS
 			{
 				if (userChoice == "y" || userChoice == "Y" || userChoice == "yes" || userChoice == "Yes")
 				{
-					Console.WriteLine("Choose either the number or type in the attack from the list below: ");
-					
+					Console.WriteLine("ATTACK STRENGTHS: \n");
+					gestures.PrintAttackList();
 					var listAttackChoice = Console.ReadLine();
-					//while(viewListAttacks == false)
-					//	if (viewListAttacks == valuesAndGestures)
-					//	{
-
-					//	}
 					viewRules = true;
 				}
 				else if (userChoice == "n" || userChoice == "N" || userChoice == "no" || userChoice == "No")
 				{
-					Console.WriteLine("Well alllllllrighty then, Mr. Smarty-Pants. Let us begin the game.");
+					Console.WriteLine("Well alllllllrighty then, Mr. Smarty-Pants. Let us begin the game. \n");
 					viewRules = true;
 				}
 				else

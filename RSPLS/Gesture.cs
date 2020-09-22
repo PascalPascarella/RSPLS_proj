@@ -32,12 +32,15 @@ namespace RSPLS
 		public GestureAttacks glockAttack;
 
 		public List<GestureFab> gestureList;
+		public List<GestureAttacks> gestureListAttacks;
+
 
 
 		// Constructor
 		public Gesture()
 		{
 			gestureList = new List<GestureFab>();
+			gestureListAttacks = new List<GestureAttacks>();
 			// Efficiency Testing with Dictionary
 			rock = new GestureFab()
 			{
@@ -175,6 +178,16 @@ namespace RSPLS
 			gestureList.Add(batman);
 			gestureList.Add(wizard);
 			gestureList.Add(glock);
+
+			gestureListAttacks.Add(rockAttack);
+			gestureListAttacks.Add(paperAttack);
+			gestureListAttacks.Add(scissorsAttack);
+			gestureListAttacks.Add(lizardAttack);
+			gestureListAttacks.Add(spockAttack);
+			gestureListAttacks.Add(spidermanAttack);
+			gestureListAttacks.Add(batmanAttack);
+			gestureListAttacks.Add(wizardAttack);
+			gestureListAttacks.Add(glockAttack);
 		}
 
 		// Member Methods
@@ -184,12 +197,12 @@ namespace RSPLS
 			foreach (GestureFab i in gestureList)
 			Console.WriteLine(i.gesture);
 		}
-		//// Print Attack List
-		//public void PrintAttackList()
-		//{
-		//	foreach (string i in gestureAttacks)
-		//		Console.WriteLine(i);
-		//}
+		// Print Attack List
+		public void PrintAttackList()
+		{
+			foreach (GestureAttacks i in gestureListAttacks)
+				Console.WriteLine($"{i.attack1} \n{i.attack2} \n{i.attack3} \n{i.attack4}\n");
+		}
 		//// Condense Gesture And Value Lists
 		//public void ListsCondense()
 		//{
