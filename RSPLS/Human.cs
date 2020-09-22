@@ -8,6 +8,7 @@ namespace RSPLS
 	{
 		// Member Variables
 		public Gesture gestures;
+		public string userGesture;
 
 		// Constructor
 		public Human()
@@ -17,10 +18,13 @@ namespace RSPLS
 
 		// Member Methods
 		// Capture User Input
-		public override void GestureSelection()
+		public override string GestureSelection()
 		{
-			//Console.WriteLine("Please choose a number or gesture from the selection below!");
-			//var userChoice = Console.ReadLine();
+			Console.WriteLine("Please choose a number or gesture from the selection below!");
+			gestures.PrintGestureSelection();
+
+			string userGesture = Console.ReadLine();
+			return userGesture;
 		}
 
 	}

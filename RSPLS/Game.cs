@@ -16,6 +16,7 @@ namespace RSPLS
 		public int userInputRules;
 		public bool viewRules;
 		public bool viewListAttacks;
+		public string userGesture;
 
 
 		// Constructor
@@ -96,6 +97,34 @@ namespace RSPLS
 			}
 		}
 		// Gesture Comparison
+		public void GestureCompare()
+		{	// Look into switch cases instead of if-else
+			if((player1.GestureSelection() == Convert.ToString(gestures.rock.ID)) &&
+				(player2.GestureSelection() == Convert.ToString(gestures.lizard.ID) ||
+				player2.GestureSelection() == Convert.ToString(gestures.wizard.ID) ||
+				player2.GestureSelection() == Convert.ToString(gestures.scissors.ID) ||
+				player2.GestureSelection() == Convert.ToString(gestures.spiderman.ID)))
+			{
+				if (player2.GestureSelection() == Convert.ToString(gestures.lizard.ID))
+				{
+					Console.WriteLine(gestures.rockAttack.attack1);
+				}
+				else if (player2.GestureSelection() == Convert.ToString(gestures.wizard.ID))
+				{
+					Console.WriteLine(gestures.rockAttack.attack2);
+				}
+				else if (player2.userGesture == Convert.ToString(gestures.scissors.ID))
+				{
+					Console.WriteLine(gestures.rockAttack.attack3);
+				}
+				else if (player2.userGesture == Convert.ToString(gestures.spiderman.ID))
+				{
+					Console.WriteLine(gestures.rockAttack.attack4);
+				}
+				player1.score++;
+			}
+		}
+
 		// Display Score
 		public void PrintScore()
 		{
@@ -123,5 +152,6 @@ namespace RSPLS
 				GameTypeSelect();					// Recycles for user input validation
 			}
 		}
+		//
 	}
 }

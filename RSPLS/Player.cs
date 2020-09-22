@@ -9,7 +9,7 @@ namespace RSPLS
 		// Member Variables
 		public Gesture gesture;
 		public int score;
-
+		public string userGesture;
 
 		// Constructor
 		public Player()
@@ -18,7 +18,7 @@ namespace RSPLS
 		}
 
 		// Member Methods
-		public abstract void GestureSelection();
+		public abstract string GestureSelection();
 
 
 	}

@@ -203,92 +203,11 @@ namespace RSPLS
 			foreach (GestureAttacks i in gestureListAttacks)
 				Console.WriteLine($"{i.attack1} \n{i.attack2} \n{i.attack3} \n{i.attack4}\n");
 		}
-		//// Condense Gesture And Value Lists
-		//public void ListsCondense()
-		//{
-		//	var valuesAndGestures = gestureValues.Zip(gestureStrings, (value, gesture) => value + " " + gesture);		// Merges 2 lists into referenced coordinate system with [n] returning the nth index from each list (ex: [0] = <1 rock>).
-		//	foreach (var item in valuesAndGestures)
-		//	{
-		//		Console.WriteLine(item);
-		//	}
-		//}
-		//// What Gesture Is Able To Attack Another
-		//public void PrintAttackListRock()
-		//{
-		//	foreach (var item in rockAttacks)
-		//	{
-		//		Console.WriteLine(item);
-
-		//	}
-
-		//}
-		//public void PrintAttackListPaper()
-		//{
-		//	foreach (var item in paperAttacks)
-		//	{
-		//		Console.WriteLine(item);
-
-		//	}
-		//}
-		//public void PrintAttackListScissors()
-		//{
-		//	foreach (var item in scissorsAttacks)
-		//	{
-		//		Console.WriteLine(item);
-
-		//	}
-
-		//}
-		//public void PrintAttackListLizard()
-		//{
-		//	foreach (var item in lizardAttacks)
-		//	{
-		//		Console.WriteLine(item);
-
-		//	}
-
-		//}
-		//public void PrintAttackListSpock()
-		//{
-		//	foreach (var item in spockAttacks)
-		//	{
-		//		Console.WriteLine(item);
-
-		//	}
-		//}
-		//public void PrintAttackListSpiderman()
-		//{
-		//	foreach (var item in spidermanAttacks)
-		//	{
-		//		Console.WriteLine(item);
-
-		//	}
-
-		//}
-		//public void PrintAttackListBatman()
-		//{
-		//	foreach (var item in batmanAttacks)
-		//	{
-		//		Console.WriteLine(item);
-
-		//	}
-
-		//}
-		//public void PrintAttackListWizard()
-		//{
-		//	foreach (var item in wizardAttacks)
-		//	{
-		//		Console.WriteLine(item);
-
-		//	}
-		//}
-		//public void PrintAttackListGlock()
-		//{
-		//	foreach (var item in glockAttacks)
-		//	{
-		//		Console.WriteLine(item);
-
-		//	}
-		//}
+		// Print Select Gesture List
+		public void PrintGestureSelection()
+		{
+			foreach(GestureFab i in gestureList)
+				Console.WriteLine(i.ID + " " + i.gesture);
+		}
 	}
 }
