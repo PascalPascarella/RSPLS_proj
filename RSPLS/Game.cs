@@ -11,8 +11,6 @@ namespace RSPLS
 		// Member Variables
 		public Player player1;
 		public Player player2;
-		public Ai aiPlayer;
-		public Human humanPlayer;
 		public Gesture gestures;
 		public int winningScore;
 		public int userInputRules;
@@ -24,7 +22,6 @@ namespace RSPLS
 		public Game()
 		{
 
-			aiPlayer = new Ai();
 			player1 = new Human();
 			gestures = new Gesture();
 			winningScore = 3;
@@ -42,7 +39,10 @@ namespace RSPLS
 			ViewRules();
 			// User Selects How Many Players and Type
 			// Game Start
-
+			GameTypeSelect();
+			PrintScore();
+			player1.GestureSelection();
+			player2.GestureSelection();
 			// Declare Victor
 			// Play Again?
 			// Add Custom Gestures?
@@ -94,7 +94,34 @@ namespace RSPLS
 					userChoice = Console.ReadLine();
 				}
 			}
-			//gestures.PrintAttackList();
+		}
+		// Gesture Comparison
+		// Display Score
+		public void PrintScore()
+		{
+			Console.WriteLine("As it stands...\n" +
+				$"Player 1's Score: {player1.score}\n" +
+				$"Player 2's Score: {player2.score}");
+		}
+		// Game Type
+		public void GameTypeSelect()
+		{
+			Console.WriteLine("Choose: \n1 for Human vs AI game\nor\n2 for Human vs Human game.");
+			string userGT = Console.ReadLine();
+			if (userGT == "1")
+			{
+				player2 = new Ai();       // Creates a Human vs AI game
+				Console.WriteLine("An AI opponent approaches!");
+			}
+			else if (userGT == "2")
+			{
+				player2 = new Human();    // Creates a Human vs Human game
+				Console.WriteLine("Another human approaches!");
+			}
+			else
+			{
+				GameTypeSelect();					// Recycles for user input validation
+			}
 		}
 	}
 }

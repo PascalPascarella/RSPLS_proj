@@ -7,7 +7,7 @@ namespace RSPLS
 	abstract class Player
 	{
 		// Member Variables
-		public string gestureValuePair;
+		public Gesture gesture;
 		public int score;
 
 
