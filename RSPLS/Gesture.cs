@@ -44,13 +44,13 @@ namespace RSPLS
 			// Efficiency Testing with Dictionary
 			rock = new GestureFab()
 			{
-				ID = 1,
+				ID = 0,
 				gesture = "Rock",
 				gestureAlt = "rock",
 			};
 			rockAttack = new GestureAttacks()
 			{
-				ID = 1,
+				ID = 0,
 				attack1 = "Rock smashes Lizard!",
 				attack2 = "Rock blocks Wizard!",
 				attack3 = "Rock crushes Scissors!",
@@ -58,13 +58,13 @@ namespace RSPLS
 			};
 			paper = new GestureFab()
 			{
-				ID = 2,
+				ID = 1,
 				gesture = "Paper",
 				gestureAlt = "paper",
 			};
 			paperAttack = new GestureAttacks()
 			{
-				ID = 2,
+				ID = 1,
 				attack1 = "Paper engulfs Rock!",
 				attack2 = "Paper disproves Spock!",
 				attack3 = "Paper says Glock missed!",
@@ -72,13 +72,13 @@ namespace RSPLS
 			};
 			scissors = new GestureFab()
 			{
-				ID = 3,
+				ID = 2,
 				gesture = "Scissors",
 				gestureAlt = "scissors",
 			};
 			scissorsAttack = new GestureAttacks()
 			{
-				ID = 3,
+				ID = 2,
 				attack1 = "Scissors cut Paper!",
 				attack2 = "Scissors destroy Wizard's robe!",
 				attack3 = "Scissors slice off Lizard's tail!",
@@ -86,27 +86,27 @@ namespace RSPLS
 			};
 			lizard = new GestureFab()
 			{
-				ID = 4,
+				ID = 3,
 				gesture = "Lizard",
 				gestureAlt = "lizard",
 			};
 			lizardAttack = new GestureAttacks()
 			{
-				ID = 4,
-				attack1 = "Lizard poisons Spock",
+				ID = 3,
+				attack1 = "Lizard poisons Spock!",
 				attack2 = "Lizard looks like Killer Croc and confuses Batman!",
 				attack3 = "Lizard eats Paper!",
 				attack4 = "Lizard is too small for Glock!",
 			};
 			spock = new GestureFab()
 			{
-				ID = 5,
+				ID = 4,
 				gesture = "Spock",
 				gestureAlt = "spock",
 			};
 			spockAttack = new GestureAttacks()
 			{
-				ID = 5,
+				ID = 4,
 				attack1 = "Spock stuns Wizard!",
 				attack2 = "Spock leaves Spiderman starstruck!",
 				attack3 = "Spock vaporizes Rock!",
@@ -114,41 +114,41 @@ namespace RSPLS
 			};
 			spiderman = new GestureFab()
 			{
-				ID = 6,
+				ID = 5,
 				gesture = "Spiderman",
 				gestureAlt = "spiderman",
 			};
 			spidermanAttack = new GestureAttacks()
 			{
-				ID = 6,
-				attack1 = "Spiderman thwips Glock",
+				ID = 5,
+				attack1 = "Spiderman thwips Glock!",
 				attack2 = "Spiderman catches Lizard for science class!",
 				attack3 = "Spiderman overtakes Paper's front page!",
 				attack4 = "Spiderman confuses Wizard!",
 			};
 			batman = new GestureFab()
 			{
-				ID = 7,
+				ID = 6,
 				gesture = "Batman",
 				gestureAlt = "batman",
 			};
 			batmanAttack = new GestureAttacks()
 			{
-				ID = 7,
+				ID = 6,
 				attack1 = "Batman's stack of money crushes Spiderman!",
 				attack2 = "Batman dismantles Scissors for analysis!",
-				attack3 = "Batman pellet grenades blast through Rock!",
+				attack3 = "Batman's pellet grenades blast through Rock!",
 				attack4 = "Batman trips-up Spock!",
 			};
 			wizard = new GestureFab()
 			{
-				ID = 8,
+				ID = 7,
 				gesture = "Wizard",
 				gestureAlt = "wizard",
 			};
 			wizardAttack = new GestureAttacks()
 			{
-				ID = 8,
+				ID = 7,
 				attack1 = "Wizard blinds Batman!",
 				attack2 = "Wizard burns Paper!",
 				attack3 = "Wizard transforms Lizard!",
@@ -156,13 +156,13 @@ namespace RSPLS
 			};
 			glock = new GestureFab()
 			{
-				ID = 9,
+				ID = 8,
 				gesture = "Glock",
 				gestureAlt = "glock",
 			};
 			glockAttack = new GestureAttacks()
 			{
-				ID = 9,
+				ID = 8,
 				attack1 = "Glock cracks Rock!",
 				attack2 = "Glock kills Batman's parents!",
 				attack3 = "Glock destroys Spock's faith in Humanity!",

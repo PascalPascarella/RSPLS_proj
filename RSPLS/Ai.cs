@@ -9,6 +9,7 @@ namespace RSPLS
 		// Member Variables
 		public Gesture gestures;
 
+
 		// Constructor
 		public Ai()
 		{
@@ -19,51 +20,58 @@ namespace RSPLS
 		public override string GestureSelection()
 		{
 			Random aiGestureRoll = new Random();
-			int roll = aiGestureRoll.Next(gestures.gestureListAttacks.Count);
-			Console.WriteLine($"The AI player has thrown {gestures.gestureList[roll].gesture}");
-			if (roll == 0)
+			int userGesture = aiGestureRoll.Next(gestures.gestureListAttacks.Count);
+			Console.WriteLine($"The AI player has thrown {gestures.gestureList[userGesture].gesture}!");
+			if (userGesture == 0)
 			{
-				return gestures.rock.gesture;
-				Console.WriteLine(gestures.rock.gesture);
+				gest = gestures.rock.gesture;
+				return gest;
 			}
-			else if (roll == 1)
+			else if (userGesture == 1)
 			{
-				return gestures.paper.gesture;
+				gest = gestures.paper.gesture;
+				return gest;
 
 			}
-			else if (roll == 2)
+			else if (userGesture == 2)
 			{
-				return gestures.scissors.gesture;
+				gest = gestures.scissors.gesture;
+				return gest;
 			}
-			else if (roll == 3)
+			else if (userGesture == 3)
 			{
-				return gestures.lizard.gesture;
+				gest = gestures.lizard.gesture;
+				return gest;
 			}
-			else if (roll == 4)
+			else if (userGesture == 4)
 			{
-				return gestures.spock.gesture;
+				gest = gestures.spock.gesture;
+				return gest;
 			}
-			else if (roll == 5)
+			else if (userGesture == 5)
 			{
-				return gestures.spiderman.gesture;
+				gest = gestures.spiderman.gesture;
+				return gest;
 			}
-			else if (roll == 6)
+			else if (userGesture == 6)
 			{
-				return gestures.batman.gesture;
+				gest = gestures.batman.gesture;
+				return gest;
 			}
-			else if (roll == 7)
+			else if (userGesture == 7)
 			{
-				return gestures.wizard.gesture;
+				gest = gestures.wizard.gesture;
+				return gest;
 			}
-			else if (roll == 8)
+			else if (userGesture == 8)
 			{
-				return gestures.glock.gesture;
+				gest = gestures.glock.gesture;
+				return gest;
 			}
 			else
 			{
 				string aiGesture = "Re-rolling.";
 				return aiGesture;
-				GestureSelection();
 			}
 		}
 

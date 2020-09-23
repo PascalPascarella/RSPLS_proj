@@ -9,7 +9,8 @@ namespace RSPLS
 		// Member Variables
 		public Gesture gesture;
 		public int score;
-		public string userGesture;
+		public int userGesture;
+		public string gest;
 
 		// Constructor
 		public Player()
