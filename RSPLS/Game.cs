@@ -51,7 +51,7 @@ namespace RSPLS
 				GestureCompare();     // Decides who wins a certain round of RPSLSSBWG
 				PrintVictor();     // Declare Victor
 			}
-			Rematch();      // Play Again?
+			/*Rematch();*/      // Play Again
 											// --> TODO: Add Custom Gestures?
 			Console.ReadLine();
 		}
@@ -74,16 +74,17 @@ namespace RSPLS
 				if (userChoice == "y" || userChoice == "Y" || userChoice == "yes" || userChoice == "Yes")
 				{
 					Console.Clear();
+					Console.WriteLine("\nBest 3 out of 5.");
 					Console.WriteLine("ATTACK STRENGTHS: \n");
 					gestures.PrintAttackList();
-					Refresher();
+					Refresher();			// Screen Refresh
 					viewRules = true;
 				}
 				else if (userChoice == "n" || userChoice == "N" || userChoice == "no" || userChoice == "No")
 				{
 					Console.Clear();
 					Console.WriteLine("Well alllllllrighty then, Mr. Smarty-Pants. Let us begin the game. \n");
-					Refresher();
+					Refresher(); 			// Screen Refresh
 					viewRules = true;
 				}
 				else
@@ -102,7 +103,7 @@ namespace RSPLS
 				Console.WriteLine($"Both players rolled a {player1.gest}");
 			}
 			// Player 1 options
-			else if ((player1.gest == (gestures.rock.gesture)) &&
+			else if ((player1.gest == (gestures.rock.gesture)) &&			// Player 1 chooses "Rock"
 				(player2.gest == (gestures.lizard.gesture) ||
 				player2.gest == (gestures.wizard.gesture) ||
 				player2.gest == (gestures.scissors.gesture) ||
@@ -126,7 +127,7 @@ namespace RSPLS
 				}
 				player1.score++;
 			}
-			else if ((player1.gest == (gestures.paper.gesture)) &&
+			else if ((player1.gest == (gestures.paper.gesture)) &&      // Player 1 chooses "Paper"
 				(player2.gest == (gestures.rock.gesture) ||
 				player2.gest == (gestures.spock.gesture) ||
 				player2.gest == (gestures.glock.gesture) ||
@@ -150,7 +151,7 @@ namespace RSPLS
 				}
 				player1.score++;
 			}
-			else if ((player1.gest == (gestures.scissors.gesture)) &&
+			else if ((player1.gest == (gestures.scissors.gesture)) &&     // Player 1 chooses "Scissors"
 				(player2.gest == (gestures.paper.gesture) ||
 				player2.gest == (gestures.wizard.gesture) ||
 				player2.gest == (gestures.lizard.gesture) ||
@@ -174,7 +175,7 @@ namespace RSPLS
 				}
 				player1.score++;
 			}
-			else if ((player1.gest == (gestures.lizard.gesture)) &&
+			else if ((player1.gest == (gestures.lizard.gesture)) &&     // Player 1 chooses "Lizard"
 				(player2.gest == (gestures.spock.gesture) ||
 				player2.gest == (gestures.batman.gesture) ||
 				player2.gest == (gestures.paper.gesture) ||
@@ -198,7 +199,7 @@ namespace RSPLS
 				}
 				player1.score++;
 			}
-			else if ((player1.gest == (gestures.spock.gesture)) &&
+			else if ((player1.gest == (gestures.spock.gesture)) &&      // Player 1 chooses "Spock"
 				(player2.gest == (gestures.wizard.gesture) ||
 				player2.gest == (gestures.spiderman.gesture) ||
 				player2.gest == (gestures.rock.gesture) ||
@@ -222,7 +223,7 @@ namespace RSPLS
 				}
 				player1.score++;
 			}
-			else if ((player1.gest == (gestures.spiderman.gesture)) &&
+			else if ((player1.gest == (gestures.spiderman.gesture)) &&      // Player 1 chooses "Spiderman"
 				(player2.gest == (gestures.glock.gesture) ||
 				player2.gest == (gestures.lizard.gesture) ||
 				player2.gest == (gestures.paper.gesture) ||
@@ -246,7 +247,7 @@ namespace RSPLS
 				}
 				player1.score++;
 			}
-			else if ((player1.gest == (gestures.batman.gesture)) &&
+			else if ((player1.gest == (gestures.batman.gesture)) &&     // Player 1 chooses "Batman"
 				(player2.gest == (gestures.spiderman.gesture) ||
 				player2.gest == (gestures.scissors.gesture) ||
 				player2.gest == (gestures.rock.gesture) ||
@@ -270,7 +271,7 @@ namespace RSPLS
 				}
 				player1.score++;
 			}
-			else if ((player1.gest == (gestures.wizard.gesture)) &&
+			else if ((player1.gest == (gestures.wizard.gesture)) &&     // Player 1 chooses "Wizard"
 				(player2.gest == (gestures.batman.gesture) ||
 				player2.gest == (gestures.paper.gesture) ||
 				player2.gest == (gestures.lizard.gesture) ||
@@ -294,7 +295,7 @@ namespace RSPLS
 				}
 				player1.score++;
 			}
-			else if ((player1.gest == (gestures.glock.gesture)) &&
+			else if ((player1.gest == (gestures.glock.gesture)) &&      // Player 1 chooses "Glock"
 				(player2.gest == (gestures.rock.gesture) ||
 				player2.gest == (gestures.batman.gesture) ||
 				player2.gest == (gestures.spock.gesture) ||
@@ -319,7 +320,7 @@ namespace RSPLS
 				player1.score++;
 			}
 			// Player 2 options
-			else if ((player2.gest == (gestures.rock.gesture)) &&
+			else if ((player2.gest == (gestures.rock.gesture)) &&     // Player 2 chooses "Rock"
 				(player1.gest == (gestures.lizard.gesture) ||
 				player1.gest == (gestures.wizard.gesture) ||
 				player1.gest == (gestures.scissors.gesture) ||
@@ -343,7 +344,7 @@ namespace RSPLS
 				}
 				player2.score++;
 			}
-			else if ((player2.gest == (gestures.paper.gesture)) &&
+			else if ((player2.gest == (gestures.paper.gesture)) &&     // Player 2 chooses "Paper"
 				(player1.gest == (gestures.rock.gesture) ||
 				player1.gest == (gestures.spock.gesture) ||
 				player1.gest == (gestures.glock.gesture) ||
@@ -367,7 +368,7 @@ namespace RSPLS
 				}
 				player2.score++;
 			}
-			else if ((player2.gest == (gestures.scissors.gesture)) &&
+			else if ((player2.gest == (gestures.scissors.gesture)) &&     // Player 2 chooses "Scissors"
 				(player1.gest == (gestures.paper.gesture) ||
 				player1.gest == (gestures.wizard.gesture) ||
 				player1.gest == (gestures.lizard.gesture) ||
@@ -391,7 +392,7 @@ namespace RSPLS
 				}
 				player2.score++;
 			}
-			else if ((player2.gest == (gestures.lizard.gesture)) &&
+			else if ((player2.gest == (gestures.lizard.gesture)) &&     // Player 2 chooses "Lizard"
 				(player1.gest == (gestures.spock.gesture) ||
 				player1.gest == (gestures.batman.gesture) ||
 				player1.gest == (gestures.paper.gesture) ||
@@ -415,7 +416,7 @@ namespace RSPLS
 				}
 				player2.score++;
 			}
-			else if ((player2.gest == (gestures.spock.gesture)) &&
+			else if ((player2.gest == (gestures.spock.gesture)) &&     // Player 2 chooses "Spock"
 				(player1.gest == (gestures.wizard.gesture) ||
 				player1.gest == (gestures.spiderman.gesture) ||
 				player1.gest == (gestures.rock.gesture) ||
@@ -439,7 +440,7 @@ namespace RSPLS
 				}
 				player2.score++;
 			}
-			else if ((player2.gest == (gestures.spiderman.gesture)) &&
+			else if ((player2.gest == (gestures.spiderman.gesture)) &&     // Player 2 chooses "Spiderman"
 				(player1.gest == (gestures.glock.gesture) ||
 				player1.gest == (gestures.lizard.gesture) ||
 				player1.gest == (gestures.paper.gesture) ||
@@ -463,7 +464,7 @@ namespace RSPLS
 				}
 				player2.score++;
 			}
-			else if ((player2.gest == (gestures.batman.gesture)) &&
+			else if ((player2.gest == (gestures.batman.gesture)) &&     // Player 2 chooses "Batman"
 				(player1.gest == (gestures.spiderman.gesture) ||
 				player1.gest == (gestures.scissors.gesture) ||
 				player1.gest == (gestures.rock.gesture) ||
@@ -487,7 +488,7 @@ namespace RSPLS
 				}
 				player2.score++;
 			}
-			else if ((player2.gest == (gestures.wizard.gesture)) &&
+			else if ((player2.gest == (gestures.wizard.gesture)) &&     // Player 2 chooses "Wizard"
 				(player1.gest == (gestures.batman.gesture) ||
 				player1.gest == (gestures.paper.gesture) ||
 				player1.gest == (gestures.lizard.gesture) ||
@@ -511,7 +512,7 @@ namespace RSPLS
 				}
 				player2.score++;
 			}
-			else if ((player2.gest == (gestures.glock.gesture)) &&
+			else if ((player2.gest == (gestures.glock.gesture)) &&     // Player 2 chooses "Glock"
 				(player1.gest == (gestures.rock.gesture) ||
 				player1.gest == (gestures.batman.gesture) ||
 				player1.gest == (gestures.spock.gesture) ||
@@ -543,7 +544,7 @@ namespace RSPLS
 			Console.WriteLine("\n\nAs it stands...\n" +
 				$"Player 1's Score: {player1.score}\n" +
 				$"Player 2's Score: {player2.score}\n\n");
-			Refresher();
+			Refresher(); 			// Screen Refresh
 		}
 
 		// Display Victor
@@ -551,13 +552,13 @@ namespace RSPLS
 		{
 			if(player1.score == winningScore)
 			{
-				Console.WriteLine($"Player 1 wins this time with a score of {player1.score}!");
-				Refresher();
+				Console.WriteLine($"\n\nPlayer 1 wins this time with a score of {player1.score}!");
+				Refresher(); 			// Screen Refresh
 			}
 			else if (player2.score == winningScore)
 			{
-				Console.WriteLine($"Player 2 wins this time with a score of {player2.score}!");
-				Refresher();
+				Console.WriteLine($"\n\nPlayer 2 wins this time with a score of {player2.score}!");
+				Refresher(); 			// Screen Refresh
 			}
 			else
 			{
