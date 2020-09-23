@@ -20,7 +20,7 @@ namespace RSPLS
 		// Capture User Input
 		public override string GestureSelection()
 		{
-			Console.WriteLine("Please choose a number or gesture from the selection below!");
+			Console.WriteLine("Please choose a number from the selection below!");		// --> TODO: Need option to reference gesture
 			gestures.PrintGestureSelection();
 
 			int userGesture = Convert.ToInt32(Console.ReadLine());
