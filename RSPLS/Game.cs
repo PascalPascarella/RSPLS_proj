@@ -46,12 +46,13 @@ namespace RSPLS
 				PrintScore();
 				Console.WriteLine("\n\nPlayer 1:");
 				player1.GestureSelection();     // Captures Player 1's throw
+				/*Refresher();*/      // Screen Refresh
 				Console.WriteLine("\n\nPlayer 2:");
 				player2.GestureSelection();			// Captures Player 2's throw
 				GestureCompare();     // Decides who wins a certain round of RPSLSSBWG
 				PrintVictor();     // Declare Victor
 			}
-			/*Rematch();*/      // Play Again
+			Rematch();      // Play Again
 											// --> TODO: Add Custom Gestures?
 			Console.ReadLine();
 		}
@@ -595,6 +596,8 @@ namespace RSPLS
 				if (userChoice == "y" || userChoice == "Y" || userChoice == "yes" || userChoice == "Yes")
 				{
 					Console.WriteLine("BEGINNING NEW MATCH! \n");
+					player1 = new Human();
+					player2.score = 0;
 					GameRun();
 					viewRules = true;
 				}

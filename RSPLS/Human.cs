@@ -72,6 +72,7 @@ namespace RSPLS
 			}
 			else
 			{
+				GestureSelection();
 				return Convert.ToString(userGesture);
 			}
 		}
